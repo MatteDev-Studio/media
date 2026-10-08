@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Download non disponibile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --color-primary: #282828;
+      --color-secondary: #858482;
+      --color-tertiary: #656160;
+
+      --color-primary-light: #3a3a3a;
+      --color-primary-dark: #1a1a1a;
+      --color-secondary-light: #9a9795;
+      --color-tertiary-light: #7a7570;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--color-primary);
+      color: var(--color-tertiary);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background-color: var(--color-primary-light);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      border: 2px solid var(--color-secondary);
+    }
+
+    h1 {
+      color: var(--color-secondary);
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      color: var(--color-tertiary-light);
+    }
+
+    .btn {
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--color-secondary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--color-tertiary);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Download non disponibile</h1>
+
+    <p>
+      Il download non è disponibile in questo momento.
+      Nessun errore critico: semplicemente non è previsto.
+    </p>
+
+    <button class="btn" onclick="goBack()">Torna indietro</button>
+
+    <footer>
+      © <span id="year"></span>
+    </footer>
+  </div>
+
+  <script>
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.close();
+      }
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Servizio non disponibile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --dark: #1f1f1f;      /* grigio scuro */
+      --light: #c9c9c9;     /* grigio chiaro */
+      --medium: #2a2a2a;    /* variante leggermente più chiara */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--light);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: var(--medium);
+      padding: 50px 40px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: var(--light);
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Servizio non disponibile</h1>
+    <p>Ci scusiamo per il disagio. Il servizio è temporaneamente non accessibile.<br>
+       Riprova più tardi.</p>
+    <a href="https://whatsapp.com/channel/0029VbB078e6BIEg3gfeuC28" class="button">Entra nel nostro canale aggiornamenti.</a>
+  </div>
+</body>
+</html>
